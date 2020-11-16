@@ -1,0 +1,31 @@
+<section class="payment">
+  <form [formGroup]= "paymentFormGroup">
+    <div class="payment__container">
+        <div class="payment__container-item">
+          <label class="payment__label">Credit Card Number</label>
+          <input class="payment__value" type="text" formControlName="creditCardNumber" placeholder="Credit Card Number"/>
+        </div>
+        <div class="payment__container-item">
+          <label class="payment__label">Card Holder</label>
+          <input class="payment__value" type="text" formControlName="cardholder" placeholder="Card Holder"/>
+        </div>
+        <div class="payment__container-item">
+          <label class="payment__label">Expiration Date</label>
+          <input class="payment__value" type="date" [min]="todayDate" formControlName="expirationDate" placeholder="Expiration Date"/>
+        </div>
+        <div class="payment__container-item">
+          <label class="payment__label">Security Code</label>
+          <input class="payment__value" type="text" formControlName="securityCode" placeholder="Security Code"/>
+        </div>
+        <div class="payment__container-item">
+          <label class="payment__label">Amount</label>
+          <input class="payment__value" type="text" formControlName="amount" placeholder="Amount"/>
+        </div>
+    </div>
+    <div class="payment__btn-container">
+        <button class="payment__btn" (click)="createPayment()">Pay</button>
+    </div>
+   
+  </form>
+    
+</section>
