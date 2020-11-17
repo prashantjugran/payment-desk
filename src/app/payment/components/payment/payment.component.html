@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="payment__btn-container">
-        <button class="payment__btn" (click)="createPayment()">Pay</button>
+        <button [disabled]="paymentFormGroup.invalid" class="payment__btn" (click)="createPayment()">Pay</button>
     </div>
    
   </form>

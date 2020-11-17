@@ -19,7 +19,7 @@ export class PaymentComponent implements OnInit {
       creditCardNumber: ['', [Validators.required]],
       cardholder: ['', [Validators.required]],
       expirationDate: ['', [Validators.required]],
-      securityCode: ['', []],
+      securityCode: ['', [Validators.pattern('^[0-9]{3}$')]],
       amount: ['',[Validators.required]]
     });
   }
